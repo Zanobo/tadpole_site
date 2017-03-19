@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+# Workaround https://github.com/bundler/bundler/issues/3324 until Bundler 2.0
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"

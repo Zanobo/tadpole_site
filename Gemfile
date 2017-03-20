@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.3'
 
 
 # Workaround https://github.com/bundler/bundler/issues/3324 until Bundler 2.0

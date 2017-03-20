@@ -5,15 +5,29 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-
-
   </head>
 
   <body>
     <%= yield %>
+
+    <% if Rails.application.config.assets.debug %>
+      <%= javascript_include_tag 'https://unpkg.com/vue@2.2.4/dist/vue.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vue-resource@1.2.1/dist/vue-resource.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vue-router@2.1.3/dist/vue-router.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vuex@2.1.1/dist/vuex.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/moment@2.17.1/moment.js' %>
+      <%= javascript_include_tag 'https://cdn.rawgit.com/wffranco/vue-strap/master/dist/vue-strap.js' %>
+    <% else %>
+      <%= javascript_include_tag 'https://unpkg.com/vue@2.2.4/dist/vue.min.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vue-resource@1.2.1/dist/vue-resource.min.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vue-router@2.1.3/dist/vue-router.min.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/vuex@2.1.1/dist/vuex.min.js' %>
+      <%= javascript_include_tag 'https://unpkg.com/moment@2.17.1/min/moment.min.js' %>
+      <%= javascript_include_tag 'https://cdn.rawgit.com/wffranco/vue-strap/master/dist/vue-strap.min.js' %>
+    <% end %>
+
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

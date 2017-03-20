@@ -53,4 +53,15 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+
+  # Add a profiling helper to every page
+  gem 'rack-mini-profiler'
+
+  # For memory profiling (requires Ruby MRI 2.1+)
+  gem 'memory_profiler', platforms: [:mri, :x64_mingw]
+
+  # For call-stack profiling flamegraphs (requires Ruby MRI 2.0.0+)
+  gem 'flamegraph', platform: :mri
+  gem 'stackprof', platform: :mri
+  gem 'fast_stack', platform: :mri
 end

@@ -9,5 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require_tree .
+
+console.log('Application.js loading.');
+
+var client = require('./client.es6');

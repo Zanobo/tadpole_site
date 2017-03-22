@@ -4,6 +4,9 @@
 # Rails
 #
 
+# Ignore application configuration
+/config/application.yml
+
 # Ignore precompiled assets
 /public/assets/*
 

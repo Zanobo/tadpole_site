@@ -1,0 +1,11 @@
+{
+  "name": "tadpole_site",
+  "engines": {
+    "node": ">= 7.3.3"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0"
+  }
+}
